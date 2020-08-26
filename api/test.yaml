@@ -21,7 +21,7 @@ paths:
       tags:
         - Applicants
     parameters: []
-  '/applicants/{user_id}':
+  '/test/{user_id}':
     parameters:
       - schema:
           type: string
