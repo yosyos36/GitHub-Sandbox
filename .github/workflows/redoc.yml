@@ -49,6 +49,6 @@ jobs:
 
     - name: Copy HTML file to S3 bucket
       env:
-        S3_UPLOAD_BUCKET: ${{ secrets.S3_BUCKET }}
+        S3_BUCKET: ${{ secrets.S3_BUCKET }}
       run: |
         find ./doc/api -name "*.html" | xargs -I {} aws s3 cp {} s3://$S3_BUCKET
