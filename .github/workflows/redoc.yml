@@ -51,6 +51,6 @@ jobs:
       env:
         S3_UPLOAD_BUCKET: ${{ secrets.S3_BUCKET }}
       run: |
-        aws s3 cp *.yaml s3://$S3_BUCKET
+        aws s3 cp *.html s3://$S3_BUCKET
 
 
