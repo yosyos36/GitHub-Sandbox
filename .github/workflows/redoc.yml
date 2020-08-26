@@ -51,4 +51,4 @@ jobs:
       env:
         S3_UPLOAD_BUCKET: ${{ secrets.S3_BUCKET }}
       run: |
-        aws s3 cp \*.html s3://$S3_BUCKET
+        find ./doc/api -name "*.html" | xargs -I {} aws s3 cp {} s3://$S3_BUCKET
