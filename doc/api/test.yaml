@@ -27,4 +27,4 @@ paths:
           type: string
         name: user_id
         in: path
-        required: false
+        required: true
