@@ -24,7 +24,7 @@ jobs:
         run: |
           cd ./vue/vue-project
           npm install
-          vue run build
+          npm run build
           ls
 
       - name: Configure AWS credentials
