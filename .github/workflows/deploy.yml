@@ -37,7 +37,6 @@ jobs:
         env:
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
         run: |
-          ls
-          cd ./dist
+          cd ./vue/vue-project/dist
           ls -F | grep -v / | xargs -I {} aws s3 cp {} s3://$S3_BUCKET
           ls -F | grep / | xargs -I {} aws s3 cp {} s3://$S3_BUCKET --recursive
